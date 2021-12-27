@@ -43,10 +43,6 @@ img {
   display: block;
 }
 
-.current {
-  color: var(--accent-color);
-}
-
 .list {
   list-style: none;
 }
@@ -104,6 +100,10 @@ img {
   color: var(--primary-text-color);
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.current {
+  color: var(--accent-color);
 }
 
 .nav-list-item {
