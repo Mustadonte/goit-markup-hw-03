@@ -20,9 +20,65 @@ body {
   letter-spacing: var(--primary-letter-spacing);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.list {
+  list-style: none;
+}
+
 /* -----------Header----------- */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+}
 
 .logo {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -34,28 +90,38 @@ body {
   color: var(--accent-color);
 }
 
-.link {
-  text-decoration: none;
+.nav-list {
+  display: flex;
+  margin-left: 93px;
 }
 
-.list {
-  list-style: none;
-}
-.nav-list-item {
+.nav-list-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.nav-list-item:hover,
-.nav-list-item:focus {
+.nav-list-item {
+  display: flex;
+}
+
+.nav-list-link:hover,
+.nav-list-link:focus {
   color: var(--accent-color);
 }
 
-.current {
-  color: var(--accent-color);
+.header-contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts-list .hcl-item + .hcl-item {
+  margin-left: 50px;
 }
 
 .nav-contacts {
@@ -70,12 +136,23 @@ body {
 .nav-contacts:focus {
   color: var(--accent-color);
 }
+
+.nav-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 /* -----------index.html------------ */
 
 /* -----------index.html/hero----------- */
+
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--secondary-bgc);
   color: var(--third-text-color);
+  text-align: center;
 }
 
 .hero-title {
@@ -88,12 +165,15 @@ body {
 }
 
 .hero-btn {
+  margin-top: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   background-color: var(--btn-bgc-color);
   color: inherit;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -103,11 +183,21 @@ body {
 }
 
 /* ---------- index.html/features ---------- */
+.features-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.features-list-item {
+  width: 270px;
+}
 .features-title,
-.team-title {
+.team-title,
+.act-title {
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
 }
 
 .features-subject {
@@ -115,11 +205,33 @@ body {
   font-size: var(--primary-font-size);
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .features-desc {
   line-height: 1.71;
   color: var(--secondary-text-color);
+}
+
+/* ---------- index.html/Activities ----------*/
+.act-sec {
+  padding-top: 0;
+}
+.act {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.act-list,
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.act-list .act-list-item + .act-list-item {
+  margin-left: 30px;
 }
 
 /* ---------- index.html/Team ----------*/
@@ -128,7 +240,29 @@ body {
   background-color: var(--third-bgc);
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.team-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-list-item {
+  padding-bottom: 30px;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-names {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -136,6 +270,9 @@ body {
 }
 
 .team-positions {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color);
@@ -194,6 +331,13 @@ body {
   background-color: var(--secondary-bgc);
 }
 
+.footer-flex {
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
   color: var(--third-text-color);
 }
@@ -215,4 +359,12 @@ body {
   font-style: normal;
   letter-spacing: 0.03em;
   line-height: 1.71;
+}
+
+.footer-list-item {
+  padding-bottom: 9px;
+}
+
+.footer-list-item:first-child {
+  margin-top: 20px;
 }
