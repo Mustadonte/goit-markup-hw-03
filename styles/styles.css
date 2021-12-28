@@ -410,7 +410,7 @@ img {
 }
 
 .footer-list-item {
-  padding-bottom: 9px;
+  line-height: 1.71;
 }
 
 .footer-list-item:first-child {
